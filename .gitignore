@@ -1,0 +1,15 @@
+# konfigurasi lokal (password database dll)
+koneksi.php
+.env
+config.local.php
+
+# dependency Composer (kalau nanti dipakai)
+vendor/
+
+# file upload user (foto, dokumen)
+uploads/
+
+# file bawaan sistem/editor
+.DS_Store
+Thumbs.db
+.vscode/
