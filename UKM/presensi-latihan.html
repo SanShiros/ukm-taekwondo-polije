@@ -6,136 +6,106 @@
 </head>
 <body>
 
-    <!-- Header / Navbar -->
-    <header>
-        <h2>SEOGI</h2>
-        <nav>
-            <a href="#">Beranda</a> | 
-            <a href="#">Profil</a> | 
-            <a href="#">Jadwal & Lokasi</a> | 
-            <a href="#">Presensi & Galeri</a> | 
-            <a href="#">Pengurus</a>
-            &nbsp;&nbsp;&nbsp;&nbsp;
-            <button type="button">Login Pengurus</button>
-        </nav>
-    </header>
+    <!-- Header / Navigasi -->
+    <div>
+        <strong>SEOGI</strong> &nbsp;&nbsp;&nbsp;
+        <a href="#">Beranda</a> &nbsp;&nbsp;
+        <a href="#">Profil</a> &nbsp;&nbsp;
+        <a href="#">Jadwal & Lokasi</a> &nbsp;&nbsp;
+        <a href="#">Prestasi & Galeri</a> &nbsp;&nbsp;
+        <a href="#">Presensi</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button type="button">Login Pengurus</button>
+    </div>
+
     <hr>
 
-    <!-- Bagian Utama: Form Presensi -->
-    <main>
-        <section>
-            <h1>Presensi Latihan</h1>
-            <p>Catat kehadiran pada sesi latihan yang sedang berlangsung</p>
+    <!-- Bagian Presensi Latihan -->
+    <h2>Presensi Latihan</h2>
+    <p>Catat kehadiran pada sesi latihan yang sedang berlangsung</p>
 
-            <form>
-                <!-- 1. Pilih Sesi Latihan -->
-                <label for="sesi"><strong>1. Pilih Sesi Latihan</strong></label><br>
-                <select id="sesi" name="sesi">
-                    <option value="kamis">Kamis, 19.00 - 21.00 | GOR Perjuangan 45</option>
-                </select>
-                <br><br>
+    <form>
+        <p><strong>1. Pilih Sesi Latihan</strong></p>
+        <select>
+            <option>Kamis, 19.00 - 21.00 - GOR Perjuangan 45</option>
+        </select>
 
-                <!-- 2. Pilih Metode Presensi -->
-                <label><strong>2. Pilih Metode Presensi</strong></label><br>
-                
-                <!-- Radio 1: Scan QR Code -->
-                <input type="radio" id="qr" name="metode" value="qr" checked>
-                <label for="qr">Scan QR Code</label>
-                <br>
-                <!-- Gambar Dummy QR Code -->
-                <img src="https://via.placeholder.com/150?text=QR+Code" alt="QR Code Presensi" width="150" height="150">
-                <br><br>
+        <p><strong>2. Pilih Metode Presensi</strong></p>
+        <p>
+            <input type="radio" name="metode" checked> Scan QR Code &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="radio" name="metode"> Masukkan NIM
+        </p>
 
-                <!-- Radio 2: Masukkan NIM -->
-                <input type="radio" id="nim_radio" name="metode" value="nim">
-                <label for="nim_radio">Masukkan NIM</label>
-                <br>
-                <input type="text" id="nim_input" placeholder="Masukkan NIM">
-                <p><em>Khusus pengurus UKM Taekwondo</em></p>
-                <br>
+        <p>[ Area Gambar QR Code ]</p>
+        
+        <p>
+            <label>Masukkan NIM:</label><br>
+            <input type="text" placeholder="Masukkan NIM">
+        </p>
 
-                <!-- Tombol Aksi -->
-                <button type="submit">Hadir</button>
-                <button type="button">Izin</button>
-            </form>
-        </section>
+        <p><em>Khusus pengurus UKM Taekwondo</em></p>
 
-        <hr>
+        <p>
+            <button type="submit">Hadir</button>
+            <button type="button">Batal</button>
+        </p>
+    </form>
 
-        <!-- Bagian Riwayat Presensi -->
-        <section>
-            <h2>Riwayat Presensi</h2>
-            <p>Pantau rekap kehadiran pada sesi latihan</p>
+    <hr>
 
-            <!-- Filter Tanggal -->
-            <form>
-                <label for="dari">Dari</label><br>
-                <input type="date" id="dari" name="dari"><br><br>
+    <!-- Bagian Riwayat Presensi -->
+    <h2>Riwayat Presensi</h2>
+    <p>Pantau rekap kehadiran pada sesi latihan</p>
 
-                <label for="sampai">Sampai</label><br>
-                <input type="date" id="sampai" name="sampai"><br><br>
+    <p>
+        <label>Dari:</label><br>
+        <input type="text" value="DD/MM/YY">
+    </p>
+    <p>
+        <label>Sampai:</label><br>
+        <input type="text" value="DD/MM/YY">
+    </p>
+    <p>
+        <button type="button">Terapkan</button>
+        <button type="button">Atur Ulang</button>
+    </p>
 
-                <button type="submit">Terapkan</button>
-                <button type="reset">Atur Ulang</button>
-            </form>
-            <br>
+    <!-- Ringkasan Statistik -->
+    <table border="1" cellpadding="10">
+        <tr>
+            <td>
+                <strong>Total Hadir</strong><br>
+                <h1>19</h1>
+            </td>
+            <td>
+                <strong>Total Sesi</strong><br>
+                <h1>5</h1>
+            </td>
+            <td>
+                <strong>Presentasi Kehadiran</strong><br>
+                <h1>100%</h1>
+            </td>
+        </tr>
+    </table>
 
-            <!-- Kartu Statistik -->
-            <table border="1" cellpadding="10">
-                <tr>
-                    <td>
-                        <small>Total Hadir</small><br>
-                        <strong>19</strong>
-                    </td>
-                    <td>
-                        <small>Total Sesi</small><br>
-                        <strong>5</strong>
-                    </td>
-                    <td>
-                        <small>Presentase Kehadiran</small><br>
-                        <strong>100%</strong>
-                    </td>
-                </tr>
-            </table>
-        </section>
+    <br>
 
-        <br>
-
-        <!-- Bagian Tabel Daftar Kehadiran -->
-        <section>
-            <h2>Daftar Kehadiran</h2>
-            <table border="1" cellpadding="8" cellspacing="0" width="100%">
-                <thead>
-                    <tr>
-                        <th>Tanggal</th>
-                        <th>Sesi Latihan</th>
-                        <th>Lokasi</th>
-                        <th>Status</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>16/12/2026</td>
-                        <td>Latihan Fisik & Sparring (Kyorugi)</td>
-                        <td>GOR Perjuangan 45 Polije</td>
-                        <td>Hadir</td>
-                    </tr>
-                    <tr>
-                        <td>16/12/2026</td>
-                        <td>Latihan Fisik & Sparring (Kyorugi)</td>
-                        <td>GOR Perjuangan 45 Polije</td>
-                        <td>Hadir</td>
-                    </tr>
-                    <tr>
-                        <td>16/12/2026</td>
-                        <td>Latihan Fisik & Sparring (Kyorugi)</td>
-                        <td>GOR Perjuangan 45 Polije</td>
-                        <td>Hadir</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-    </main>
-
-</body>
-</html>
+    <!-- Daftar Kehadiran -->
+    <h3>Daftar Kehadiran</h3>
+    <table border="1" cellpadding="5" cellspacing="0">
+        <thead>
+            <tr>
+                <th>Tanggal</th>
+                <th>Sesi Latihan</th>
+                <th>Lokasi</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>16/12/2026</td>
+                <td>Latihan Fisik & Sparring (Kyorugi)</td>
+                <td>GOR Perjuangan 45 Polije</td>
+                <td>Hadir</td>
+            </tr>
+            <tr>
+                <td>16/12/2
