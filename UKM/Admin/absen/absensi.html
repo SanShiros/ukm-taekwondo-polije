@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <div>
+        <img src="icon-seogi.png" alt="Logo SEOGI" />
+        <span>SEOGI</span>
+      </div>
+
+      <div>
+        <span>Dashboard Pengurus - UKM Taekwondo</span>
+      </div>
+      <div>
+        <span>Pengurus</span>
+        <button type="button">Keluar</button>
+      </div>
+    </header>
+    <aside>
+      <div>
+        <img src="foto-baskara.jpg" alt="Foto Baskara" />
+        <div>
+          <p>Baskara</p>
+          <p>Ketua Umum</p>
+        </div>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="#dashboard">Dashboard</a></li>
+          <li><a href="#kelola-jadwal">Kelola Jadwal</a></li>
+          <li><a href="#kelola-presensi">Kelola Presensi</a></li>
+          <li><a href="#kelola-pendaftar">Kelola Pendaftar</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <main>
+      <h1>Kelola Absensi</h1>
+
+      <section>
+        <h2>Sesi Presensi</h2>
+        <p>Sesi Aktif [Senin, 19.00-21.00] Status : Dibuka</p>
+        <div>
+          <button type="button">Buka Sesi</button>
+          <button type="button">Tampilkan QR</button>
+          <button type="button">Tutup Sesi</button>
+        </div>
+      </section>
+      <br />
+
+      <section>
+        <form action="" method="GET">
+          <div>
+            <label for="dari">Dari</label><br />
+            <input type="text" id="dari" name="dari" placeholder="DD/MM/YY" />
+          </div>
+          <br />
+          <div>
+            <label for="sampai">Sampai</label><br />
+            <input
+              type="text"
+              id="sampai"
+              name="sampai"
+              placeholder="DD/MM/YY"
+            />
+          </div>
+          <br />
+          <div>
+            <button type="submit">Tampilkan</button>
+            <button type="button">Unduh Rekap</button>
+          </div>
+        </form>
+      </section>
+      <br />
+
+      <section>
+        <h2>Rekap Kehadiran Anggota</h2>
+        <table border="1" cellpadding="10" cellspacing="0">
+          <thead>
+            <tr>
+              <th>Nama</th>
+              <th>NIM</th>
+              <th>Jumlah Hadir</th>
+              <th>Presentase</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Bintang</td>
+              <td>E41260994</td>
+              <td>18</td>
+              <td>94%</td>
+            </tr>
+            <tr>
+              <td>Bintang</td>
+              <td>E41260994</td>
+              <td>19</td>
+              <td>96%</td>
+            </tr>
+            <tr>
+              <td>Bintang</td>
+              <td>E41260994</td>
+              <td>28</td>
+              <td>100%</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </body>
+</html>
