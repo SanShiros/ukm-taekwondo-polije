@@ -11,10 +11,19 @@ body {
   background-color: #ffffff;
 }
 
+h1,
+h2,
+h3,
+.btn-primary,
+.btn-outline {
+  font-family: "Roboto", sans-serif;
+}
+
 .navbar {
   position: sticky;
   top: 16px;
   z-index: 100;
+  width: calc(100% - 40px);
   max-width: 1200px;
   margin: 16px auto 0;
   padding: 10px 24px;
@@ -26,33 +35,30 @@ body {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
 }
 
-h1,
-h2,
-h3,
-.btn-primary,
-.btn-outline {
-  font-family: "Roboto", sans-serif;
-}
-
 .navbar-logo {
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
-.navbar-logo .logo-icon {
-  height: 28px;
-  width: auto;
-}
-
+.navbar-logo .logo-icon,
 .navbar-logo .logo-text {
   height: 28px;
   width: auto;
 }
 
+.nav-content {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  gap: 28px;
+}
+
 .navbar-menu {
   display: flex;
   align-items: center;
+  justify-content: center;
+  flex: 1;
   gap: 28px;
 }
 
@@ -92,25 +98,82 @@ h3,
 }
 
 .navbar-action button:hover {
-  background-color: #8e1616;
   transform: translateY(-1px);
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.hamburger span {
+  width: 100%;
+  height: 2px;
+  background-color: #1a1a1a;
+  border-radius: 10px;
+  transition: all 0.3s ease;
 }
 
 @media (max-width: 768px) {
   .navbar {
-    margin: 12px;
-    padding: 10px 16px;
-    border-radius: 24px;
+    width: calc(100% - 32px);
+    margin: 12px 16px;
+    padding: 12px 20px;
+    border-radius: 20px;
     flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
+    justify-content: space-between;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-content {
+    display: none;
+    flex: 0 0 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 16px;
+    gap: 16px;
+    border-top: 1px solid #ddd;
+    margin-top: 12px;
+  }
+
+  .nav-content.active {
+    display: flex;
   }
 
   .navbar-menu {
-    order: 3;
+    flex: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
     width: 100%;
-    justify-content: center;
-    flex-wrap: wrap;
     gap: 16px;
+  }
+
+  .navbar-menu a {
+    font-size: 14px;
+    width: 100%;
+    border-bottom: none;
+  }
+
+  .navbar-menu a.active {
+    color: #8e1616;
+  }
+
+  .navbar-action {
+    width: 100%;
+  }
+
+  .navbar-action button {
+    width: 100%;
   }
 }
