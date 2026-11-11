@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,400&family=Roboto:wght@700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", "Segoe UI", Arial, sans-serif;
+  background-color: #ffffff;
+}
+
+.navbar {
+  position: sticky;
+  top: 16px;
+  z-index: 100;
+  max-width: 1200px;
+  margin: 16px auto 0;
+  padding: 10px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f0f0f4;
+  border-radius: 999px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+}
+
+h1,
+h2,
+h3,
+.btn-primary,
+.btn-outline {
+  font-family: "Roboto", sans-serif;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.navbar-logo .logo-icon {
+  height: 28px;
+  width: auto;
+}
+
+.navbar-logo .logo-text {
+  height: 28px;
+  width: auto;
+}
+
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.navbar-menu a {
+  font-size: 12px;
+  font-weight: 500;
+  color: #1a1a1a;
+  text-decoration: none;
+  padding-bottom: 2px;
+  border-bottom: 1.5px solid transparent;
+  transition:
+    color 0.2s,
+    border-color 0.2s;
+}
+
+.navbar-menu a:hover {
+  color: #8e1616;
+}
+
+.navbar-menu a.active {
+  border-bottom-color: #8e1616;
+}
+
+.navbar-action button {
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: #8e1616;
+  border: none;
+  border-radius: 999px;
+  padding: 10px 28px;
+  cursor: pointer;
+  transition:
+    background-color 0.2s,
+    transform 0.2s;
+}
+
+.navbar-action button:hover {
+  background-color: #8e1616;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    margin: 12px;
+    padding: 10px 16px;
+    border-radius: 24px;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .navbar-menu {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+}
