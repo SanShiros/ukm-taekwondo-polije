@@ -8,6 +8,9 @@
   <link rel="stylesheet" href="/ukm-taekwondo-polije/css/guest/navbar.css" />
   <link rel="stylesheet" href="/ukm-taekwondo-polije/css/guest/footer.css" />
   <link rel="stylesheet" href="/ukm-taekwondo-polije/css/guest/index.css">
+  <script>
+    document.documentElement.classList.add('js');
+  </script>
 </head>
 
 <body>
@@ -34,7 +37,7 @@
   </div>
 
   <section class="features-section">
-    <div class="feature-card">
+    <div class="feature-card reveal" data-delay="0">
       <div class="feature-icon">
         <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" overflow="visible">
           <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="miter">
@@ -48,7 +51,7 @@
       <p>Kami menyediakan instruktur berpengalaman.</p>
     </div>
 
-    <div class="feature-card">
+    <div class="feature-card reveal" data-delay="120">
       <div class="feature-icon">
         <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" overflow="visible">
           <defs>
@@ -78,7 +81,7 @@
       <p>Dapatkan sertifikat untuk kelancaran karir anda</p>
     </div>
 
-    <div class="feature-card">
+    <div class="feature-card reveal" data-delay="240">
       <div class="feature-icon">
         <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" overflow="visible">
           <defs>
@@ -110,9 +113,9 @@
   </section>
 
   <section id="profile" class="profile-section">
-    <h2 class="section-title">Profile UKM Taekwondo</h2>
+    <h2 class="section-title reveal">Profile UKM Taekwondo</h2>
 
-    <div class="history">
+    <div class="history reveal">
       <div class="org-logo">
         <img src="/ukm-taekwondo-polije/assets/images/logoukm.jpeg" alt="Logo Taekwondo Polije" />
       </div>
@@ -123,11 +126,11 @@
     </div>
 
     <div class="vision-mission">
-      <div class="vision-card">
+      <div class="vision-card reveal">
         <h3>Visi</h3>
         <p>Menjadikan GOR Perjuangan 45 Politeknik Negeri Jember (POLIJE) sebagai pusat pengembangan prestasi dan pembinaan karakter mahasiswa melalui kegiatan olahraga yang menjunjung tinggi sportivitas dan solidaritas.</p>
       </div>
-      <div class="mission-card">
+      <div class="mission-card reveal" data-delay="150">
         <h3>Misi</h3>
         <p>Menyelenggarakan program latihan rutin dan kompetisi olahraga secara berkala di lingkungan POLIJE.</p>
         <p>Memfasilitasi mahasiswa dalam mengembangkan minat dan bakat di berbagai cabang olahraga.</p>
@@ -137,35 +140,35 @@
     <div class="member-structure">
       <h3 class="section-title">Struktur Anggota</h3>
       <div class="member-grid">
-        <div class="member-card">
+        <div class="member-card reveal" data-delay="0">
           <img src="/ukm-taekwondo-polije/assets/images/photoprofile.jpg" alt="Foto Baskara" />
           <div class="member-info">
             <h4>Baskara</h4>
             <p>Ketua Umum</p>
           </div>
         </div>
-        <div class="member-card">
+        <div class="member-card reveal" data-delay="100">
           <img src="/ukm-taekwondo-polije/assets/images/photoprofile.jpg" alt="Foto Baskara" />
           <div class="member-info">
             <h4>Baskara</h4>
             <p>Ketua Umum</p>
           </div>
         </div>
-        <div class="member-card">
+        <div class="member-card reveal" data-delay="200">
           <img src="/ukm-taekwondo-polije/assets/images/photoprofile.jpg" alt="Foto Baskara" />
           <div class="member-info">
             <h4>Baskara</h4>
             <p>Ketua Umum</p>
           </div>
         </div>
-        <div class="member-card">
+        <div class="member-card reveal" data-delay="300">
           <img src="/ukm-taekwondo-polije/assets/images/photoprofile.jpg" alt="Foto Baskara" />
           <div class="member-info">
             <h4>Baskara</h4>
             <p>Ketua Umum</p>
           </div>
         </div>
-        <div class="member-card">
+        <div class="member-card reveal" data-delay="400">
           <img src="/ukm-taekwondo-polije/assets/images/photoprofile.jpg" alt="Foto Baskara" />
           <div class="member-info">
             <h4>Baskara</h4>
@@ -178,30 +181,43 @@
 
   <section id="achievements-gallery" class="achievements-section">
     <div class="achievements-header">
-      <h2>Prestasi & Galeri</h2>
-      <p>Dedikasi, kerja keras, dan jejak langkah perjuangan atlet UKM Taekwondo Polije dalam mengukir prestasi serta mengabadikan momen kebersamaan.</p>
+      <h2 class="reveal">Prestasi & Galeri</h2>
+      <p class="reveal" data-delay="100">Dedikasi, kerja keras, dan jejak langkah perjuangan atlet UKM Taekwondo Polije dalam mengukir prestasi serta mengabadikan momen kebersamaan.</p>
       <div class="stats">
-        <h3>19+ Piala</h3>
-        <h3>100+ Anggota</h3>
-        <h3>2 Pon</h3>
+        <h3><span data-count="19">0</span>+ Piala</h3>
+        <h3><span data-count="100">0</span>+ Anggota</h3>
+        <h3><span data-count="2">0</span> Pon</h3>
       </div>
+    </div>
+
+    <div class="prestasi">
+      <div class="prestasi-filter" id="prestasiFilter">
+        <button class="chip active" data-filter="Semua">Semua</button>
+        <button class="chip" data-filter="Nasional">Nasional</button>
+        <button class="chip" data-filter="Regional">Regional</button>
+        <button class="chip" data-filter="Kampus">Kampus</button>
+      </div>
+      <div class="prestasi-grid" id="prestasiGrid"></div>
+      <button class="btn-more" id="prestasiMore">Lihat lebih banyak</button>
     </div>
 
     <div class="gallery">
       <h2>Galeri UKM Taekwondo POLIJE</h2>
       <div class="gallery-grid">
-        <img src="/ukm-taekwondo-polije/assets/images/kegiatan.jpeg" alt="Foto kegiatan Taekwondo 1" />
-        <img src="/ukm-taekwondo-polije/assets/images/kegiatan.jpeg" alt="Foto kegiatan Taekwondo 1" />
-        <img src="/ukm-taekwondo-polije/assets/images/kegiatan.jpeg" alt="Foto kegiatan Taekwondo 1" />
-        <img src="/ukm-taekwondo-polije/assets/images/kegiatan.jpeg" alt="Foto kegiatan Taekwondo 1" />
-        <img src="/ukm-taekwondo-polije/assets/images/kegiatan.jpeg" alt="Foto kegiatan Taekwondo 1" />
-        <img src="/ukm-taekwondo-polije/assets/images/kegiatan.jpeg" alt="Foto kegiatan Taekwondo 1" />
+        <img class="reveal" src="/ukm-taekwondo-polije/assets/images/kegiatan.jpeg" alt="Foto kegiatan Taekwondo 1" />
+        <img class="reveal" src="/ukm-taekwondo-polije/assets/images/kegiatan.jpeg" alt="Foto kegiatan Taekwondo 2" />
+        <img class="reveal" src="/ukm-taekwondo-polije/assets/images/kegiatan.jpeg" alt="Foto kegiatan Taekwondo 3" />
+        <img class="reveal" src="/ukm-taekwondo-polije/assets/images/kegiatan.jpeg" alt="Foto kegiatan Taekwondo 4" />
+        <img class="reveal" src="/ukm-taekwondo-polije/assets/images/kegiatan.jpeg" alt="Foto kegiatan Taekwondo 5" />
+        <img class="reveal" src="/ukm-taekwondo-polije/assets/images/kegiatan.jpeg" alt="Foto kegiatan Taekwondo 6" />
       </div>
     </div>
   </section>
   </main>
+  <div class="lightbox" id="lightbox"><img alt="" /></div>
+  <button class="to-top" id="toTop" aria-label="Kembali ke atas">↑</button>
   <?php include __DIR__ . '/../component/guest/footer.php'; ?>
-
+  <script src="/ukm-taekwondo-polije/js/guest/index.js"></script>
 </body>
 
 </html>
