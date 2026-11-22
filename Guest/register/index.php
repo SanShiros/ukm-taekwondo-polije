@@ -82,7 +82,7 @@
           </div>
         </div>
 
-        <button type="submit" class="btn-primary">Kirim Pendaftaran</button>
+        <button type="submit" class="btn-primary"><a href="/ukm-taekwondo-polije/Guest/register/success.html" style="color: white; text-decoration: none;">Kirim Pendaftaran</a></button>
         <a href="/ukm-taekwondo-polije/guest/index.php">
           <button type="button" class="btn-outline">Batal</button>
         </a>

@@ -15,7 +15,7 @@
       <a class="active" href="#home">Beranda</a>
       <a href="#profile">Profile</a>
       <a href="#achievements-gallery">Prestasi &amp; Galeri</a>
-      <a href="#pendaftaran">Pendaftaran</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSeM4DXDO70-tjxfywsx68sLyRHSIHCC7zKnB8ha-B_rmf6P8g/viewform?usp=publish-editor">Pendaftaran</a>
       <span class="nav-indicator"></span>
     </div>
     <div class="navbar-action">

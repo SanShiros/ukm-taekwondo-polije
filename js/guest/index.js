@@ -1,6 +1,10 @@
 const FOTO_DEFAULT = "/ukm-taekwondo-polije/assets/images/kegiatan.jpeg";
 
-const prestasi = [{ judul: "Juara 1 Kyorugi Putra", event: "Kejuaraan Taekwondo Jawa Timur", tahun: 2025, level: "Regional", medali: "Emas", foto: "/ukm-taekwondo-polije/assets/images/kegiatan.jpeg" }];
+const prestasi = [
+  { judul: "Juara 1 Kyorugi Putra", event: "Kejuaraan Taekwondo Jawa Timur", tahun: 2025, level: "Regional", medali: "Emas", foto: "/ukm-taekwondo-polije/assets/images/kegiatan.jpeg" },
+  { judul: "Juara 1 Kyorugi Putra", event: "Kejuaraan Taekwondo Jawa Timur", tahun: 2025, level: "Regional", medali: "Emas", foto: "/ukm-taekwondo-polije/assets/images/kegiatan.jpeg" },
+  { judul: "Juara 1 Kyorugi Putra", event: "Kejuaraan Taekwondo Jawa Timur", tahun: 2025, level: "Regional", medali: "Emas", foto: "/ukm-taekwondo-polije/assets/images/kegiatan.jpeg" },
+];
 
 const PER_PAGE = 6;
 let filter = "Semua";
