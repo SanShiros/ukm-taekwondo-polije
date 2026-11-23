@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Beranda Member | UKM Taekwondo Polije</title>
+
+    <link rel="stylesheet" href="../css/component.css" />
+    <link rel="stylesheet" href="../css/member/navbar.css" />
+    <link rel="stylesheet" href="../css/member/footer.css" />
+    <link rel="stylesheet" href="../css/member/index.css" />
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+  </head>
+
+  <body>
+    <nav class="navbar" id="navbar">
+      <div class="navbar-logo">
+        <img class="logo-icon" src="../assets/images/logo.png" alt="Logo SEOGI" />
+        <img class="logo-text" src="../assets/images/textlogo.png" alt="SEOGI" />
+      </div>
+
+      <button class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="nav-content" id="nav-content">
+        <div class="navbar-menu">
+          <a class="active" href="#home">Beranda</a>
+          <a href="#profile">Profile</a>
+          <a href="#news-events">Berita & Kegiatan</a>
+          <a href="">Jadwal & Lokasi</a>
+          <a href="">Presensi</a>
+          <span class="nav-indicator"></span>
+        </div>
+        <div class="navbar-action">
+          <a href="../Guest/register/index.php">
+            <button type="button">Daftar Sekarang</button>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const hamburger = document.getElementById("hamburger");
+        const navContent = document.getElementById("nav-content");
+        const links = document.querySelectorAll('.navbar-menu a[href^="#"]');
+        const indicator = document.querySelector(".nav-indicator");
+
+        hamburger.addEventListener("click", () => navContent.classList.toggle("active"));
+        links.forEach((a) => a.addEventListener("click", () => navContent.classList.remove("active")));
+
+        function moveIndicator() {
+          const active = document.querySelector(".navbar-menu a.active");
+          if (!active) return;
+          indicator.style.width = active.offsetWidth + "px";
+          indicator.style.transform = `translateX(${active.offsetLeft}px)`;
+        }
+
+        function setActive(id) {
+          links.forEach((l) => l.classList.toggle("active", l.getAttribute("href") === "#" + id));
+          moveIndicator();
+        }
+
+        const spy = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((e) => {
+              if (e.isIntersecting) setActive(e.target.id);
+            });
+          },
+          {
+            rootMargin: "-45% 0px -50% 0px",
+          },
+        );
+
+        links.forEach((a) => {
+          const target = document.querySelector(a.getAttribute("href"));
+          if (target) spy.observe(target);
+        });
+
+        moveIndicator();
+        window.addEventListener("load", moveIndicator); // setelah font selesai dimuat
+        window.addEventListener("resize", moveIndicator);
+      });
+    </script>
+    <main>
+      <!-- HOME -->
+      <section id="home" class="hero-section">
+        <h1 class="reveal">UKM Taekwondo</h1>
+        <p class="reveal" data-delay="120">Kembangkan potensimu dan pelajari seni bela diri bersama UKM Taekwondo. Dapatkan pengalaman baru, relasi, dan tubuh yang lebih sehat. Jangan lewatkan kesempatannya, klik Daftar Sekarang!</p>
+        <img class="reveal" data-delay="240" src="/ukm-taekwondo-polije/assets/images/Main.png" alt="Anggota UKM Taekwondo" />
+      </section>
+
+      <!-- NEXT TRAINING SCHEDULE -->
+      <section id="training-schedule" class="schedule-section">
+        <div class="schedule-card reveal">
+          <div class="schedule-info">
+            <h3>
+              <time datetime="2026-10-29">Kamis, 29 Oktober 2026</time>
+              [19:00] - [21:00]
+            </h3>
+            <p>Lokasi : GOR Politeknik Negeri Jember</p>
+          </div>
+          <a href="#" class="btn-primary">Lihat Jadwal Lengkap</a>
+        </div>
+      </section>
+
+      <!-- LATEST INFO -->
+      <section id="latest-info" class="info-section">
+        <h2 class="reveal">Info Terbaru</h2>
+        <div class="info-grid">
+          <article class="info-card reveal" data-delay="0">
+            <h3>Kamis, 29 Oktober 2026</h3>
+            <p>Lokasi : GOR Perjuangan 45 Politeknik Negeri Jember (POLIJE)</p>
+            <p>Materi : Latihan gerakan dasar hingga menengah (Kyorugi)</p>
+            <a href="#" class="btn-light">Lihat Sekarang</a>
+          </article>
+          <article class="info-card reveal" data-delay="120">
+            <h3>Kamis, 29 Oktober 2026</h3>
+            <p>Lokasi : GOR Perjuangan 45 Politeknik Negeri Jember (POLIJE)</p>
+            <p>Materi : Latihan gerakan dasar hingga menengah (Kyorugi)</p>
+            <a href="#" class="btn-light">Lihat Sekarang</a>
+          </article>
+          <article class="info-card reveal" data-delay="240">
+            <h3>Kamis, 29 Oktober 2026</h3>
+            <p>Lokasi : GOR Perjuangan 45 Politeknik Negeri Jember (POLIJE)</p>
+            <p>Materi : Latihan gerakan dasar hingga menengah (Kyorugi)</p>
+            <a href="#" class="btn-light">Lihat Sekarang</a>
+          </article>
+        </div>
+      </section>
+
+      <!-- PROFILE -->
+      <section id="profile" class="profile-section">
+        <h2 class="section-title reveal">Profile UKM Taekwondo</h2>
+
+        <div class="history">
+          <div class="org-logo reveal">
+            <img src="../assets/images/logoukm.jpeg" alt="Logo Taekwondo Polije" />
+          </div>
+          <div class="history-text reveal" data-delay="150">
+            <h3>Sejarah Singkat</h3>
+            <p>UKM Taekwondo Politeknik Negeri Jember berdiri pada [tahun] atas inisiatif [mahasiswa/dosen/pembina] yang melihat besarnya minat mahasiswa terhadap seni bela diri. Pada awalnya, kegiatan latihan dilakukan secara sederhana di [lokasi awal latihan] dengan jumlah anggota sekitar [jumlah] orang. Meski fasilitas masih terbatas, semangat para anggota untuk belajar dan berlatih menjadi modal utama berdirinya UKM ini.</p>
+          </div>
+        </div>
+
+        <div class="vision-mission">
+          <div class="vision-card reveal">
+            <h3>Visi</h3>
+            <p>Menjadikan GOR Perjuangan 45 Politeknik Negeri Jember (POLIJE) sebagai pusat pengembangan prestasi dan pembinaan karakter mahasiswa melalui kegiatan olahraga yang menjunjung tinggi sportivitas dan solidaritas.</p>
+          </div>
+          <div class="mission-card reveal" data-delay="150">
+            <h3>Misi</h3>
+            <p>Menyelenggarakan program latihan rutin dan kompetisi olahraga secara berkala di lingkungan POLIJE.</p>
+            <p>Memfasilitasi mahasiswa dalam mengembangkan minat dan bakat di berbagai cabang olahraga.</p>
+          </div>
+        </div>
+
+        <div class="member-structure">
+          <h3 class="section-title reveal">Struktur Anggota</h3>
+          <div class="member-grid">
+            <div class="member-card reveal" data-delay="0">
+              <img src="../assets/images/photoprofile.jpg" alt="Foto Baskara" />
+              <div class="member-info">
+                <h4>Baskara</h4>
+                <p>Ketua Umum</p>
+              </div>
+            </div>
+            <div class="member-card reveal" data-delay="100">
+              <img src="../assets/images/photoprofile.jpg" alt="Foto Baskara" />
+              <div class="member-info">
+                <h4>Baskara</h4>
+                <p>Ketua Umum</p>
+              </div>
+            </div>
+            <div class="member-card reveal" data-delay="200">
+              <img src="../assets/images/photoprofile.jpg" alt="Foto Baskara" />
+              <div class="member-info">
+                <h4>Baskara</h4>
+                <p>Ketua Umum</p>
+              </div>
+            </div>
+            <div class="member-card reveal" data-delay="300">
+              <img src="../assets/images/photoprofile.jpg" alt="Foto Baskara" />
+              <div class="member-info">
+                <h4>Baskara</h4>
+                <p>Ketua Umum</p>
+              </div>
+            </div>
+            <div class="member-card reveal" data-delay="400">
+              <img src="../assets/images/photoprofile.jpg" alt="Foto Baskara" />
+              <div class="member-info">
+                <h4>Baskara</h4>
+                <p>Ketua Umum</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- NEWS & EVENTS -->
+      <section id="news-events" class="news-section">
+        <div class="news-header reveal">
+          <h2 class="section-title">Berita & Kegiatan</h2>
+          <p>Informasi dan Agenda terbaru UKM Taekwondo</p>
+        </div>
+
+        <div class="event-agenda">
+          <h3 class="reveal">Agenda Kegiatan</h3>
+
+          <div class="agenda-list">
+            <article class="agenda-card reveal" data-delay="0">
+              <time class="agenda-date" datetime="2026-11-15">15 Nov</time>
+              <div class="agenda-info">
+                <h4>Latihan Gabungan & Pemantapan Teknik Sabuk Hitam UKM Taekwondo</h4>
+                <p>08:00 - 12:00 WIB • GOR Perjuangan 45 Polije</p>
+              </div>
+            </article>
+
+            <article class="agenda-card reveal" data-delay="120">
+              <time class="agenda-date" datetime="2026-11-15">15 Nov</time>
+              <div class="agenda-info">
+                <h4>Latihan Gabungan & Pemantapan Teknik Sabuk Hitam UKM Taekwondo</h4>
+                <p>08:00 - 12:00 WIB • GOR Perjuangan 45 Polije</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="news-grid">
+          <article class="news-card reveal" data-delay="0">
+            <img src="../assets/images/kegiatan.jpeg" alt="Foto bersama anggota UKM Taekwondo Polije" />
+            <div class="news-content">
+              <h3>Pembukaan Pendaftaran Anggota Baru UKM Taekwondo Gelombang II</h3>
+              <p class="news-meta">
+                <time datetime="2026-11-10">10/11/2026</time>
+                • Pengumuman
+              </p>
+              <p class="news-summary">UKM Taekwondo Polije kembali membuka pendaftaran anggota baru bagi seluruh mahasiswa aktif yang ingin mengasah fisik dan prestasi.</p>
+              <a href="#" class="btn-read-more">Selengkapnya</a>
+            </div>
+          </article>
+
+          <article class="news-card reveal" data-delay="150">
+            <img src="../assets/images/kegiatan.jpeg" alt="Foto bersama anggota UKM Taekwondo Polije" />
+            <div class="news-content">
+              <h3>Pembukaan Pendaftaran Anggota Baru UKM Taekwondo Gelombang II</h3>
+              <p class="news-meta">
+                <time datetime="2026-11-10">10/11/2026</time>
+                • Pengumuman
+              </p>
+              <p class="news-summary">UKM Taekwondo Polije kembali membuka pendaftaran anggota baru bagi seluruh mahasiswa aktif yang ingin mengasah fisik dan prestasi.</p>
+              <a href="#" class="btn-read-more">Selengkapnya</a>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-container">
+        <div class="footer-top">
+          <h1>UKM Taekwondo Polije</h1>
+          <button type="button" class="btn-saran">Kritik & Saran</button>
+        </div>
+
+        <div class="footer-menu">
+          <div class="menu-col-1">
+            <a href="#home">Beranda</a>
+            <a href="#profile">Profil</a>
+          </div>
+          <div class="menu-col-2">
+            <a href="#achivement-galeri">Prestasi &amp; Galeri</a>
+            <a href="#contact">Kontak</a>
+          </div>
+        </div>
+
+        <div class="footer-social">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" overflow="visible">
+            <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="miter">
+              <path d="M6.5 3L13.55 3A3.5 3.5 0 0 1 16.025 4.025L19.975 7.975A3.5 3.5 0 0 1 21 10.45L21 17.5A3.5 3.5 0 0 1 17.5 21L10.45 21A3.5 3.5 0 0 1 7.975 19.975L4.025 16.025A3.5 3.5 0 0 1 3 13.55L3 6.5A3.5 3.5 0 0 1 6.5 3Z" />
+              <path d="M15.3 12.5C15.3 14.599 13.599 16.3 11.5 16.3C9.401 16.3 7.7 14.599 7.7 12.5C7.7 10.401 9.401 8.7 11.5 8.7C13.599 8.7 15.3 10.401 15.3 12.5Z" />
+              <path d="M17.1 7.5C17.1 7.831 16.831 8.1 16.5 8.1C16.169 8.1 15.9 7.831 15.9 7.5C15.9 7.169 16.169 6.9 16.5 6.9C16.831 6.9 17.1 7.169 17.1 7.5Z" />
+            </g>
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" overflow="visible">
+            <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="miter">
+              <path d="M6 5.5L18 5.5A3.5 3.5 0 0 1 21.5 9L21.5 15A3.5 3.5 0 0 1 18 18.5L6 18.5A3.5 3.5 0 0 1 2.5 15L2.5 9A3.5 3.5 0 0 1 6 5.5Z" />
+              <path d="M11.53 10.265L13.416 11.208A0.886 0.886 0 0 1 13.416 12.792L11.53 13.735A1.057 1.057 0 0 1 10 12.789L10 11.211A1.057 1.057 0 0 1 11.53 10.265Z" />
+            </g>
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" overflow="visible">
+            <defs>
+              <mask id="social-tiktok-outline-c0" maskUnits="userSpaceOnUse" x="-2" y="-2" width="28" height="28">
+                <rect x="-2" y="-2" width="28" height="28" fill="#fff" />
+                <polygon points="14.13,4.88 14.13,1.5 11.88,1.13 11.88,2.63" fill="#000" />
+                <polygon points="11.88,15.13 11.88,18.5 14.13,18.88 14.13,17.38" fill="#000" />
+              </mask>
+            </defs>
+            <defs>
+              <mask id="social-tiktok-outline-c2" maskUnits="userSpaceOnUse" x="-2" y="-2" width="28" height="28">
+                <rect x="-2" y="-2" width="28" height="28" fill="#fff" />
+                <polygon points="14.71,4.36 13.53,1.2 11.29,1.64 11.81,3.04" fill="#000" />
+                <polygon points="16.35,8.9 19.51,10.08 20.65,8.1 19.25,7.58" fill="#000" />
+              </mask>
+            </defs>
+            <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="miter">
+              <path d="M13 3L13 17" mask="url(#social-tiktok-outline-c0)" />
+              <path d="M13 17C13 18.933 11.433 20.5 9.5 20.5C7.567 20.5 6 18.933 6 17C6 15.067 7.567 13.5 9.5 13.5C11.433 13.5 13 15.067 13 17Z" />
+              <path d="M13 3L14.237 6.298A1.65 1.65 0 0 0 15.202 7.263L18.5 8.5" mask="url(#social-tiktok-outline-c2)" />
+            </g>
+          </svg>
+        </div>
+
+        <hr class="footer-divider" />
+
+        <div class="footer-bottom">
+          <p>
+            <a href="#">Syarat & Ketentuan Website</a>
+            |
+            <a href="#">Kebijakan Privasi</a>
+            |
+            <a href="#">Kode Etik Anggota</a>
+            |
+            <a href="#">Panduan Latihan & Keselamatan</a>
+            |
+            <a href="#">Regulasi Sabuk & UUK</a>
+          </p>
+          <p>©2026 UKM Taekwondo Polije. Hak Cipta Dilindungi Undang-Undang.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../js/member/index.js"></script>
+  </body>
+</html>
