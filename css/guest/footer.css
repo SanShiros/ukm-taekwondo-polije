@@ -43,12 +43,14 @@ h3,
   line-height: 1.2;
 }
 
-.btn-saran {
+.btn-feedback {
+  display: inline-block; /* Wajib untuk tag <a> agar bisa diatur padding dan ukurannya */
   font-family: inherit;
   font-size: 12px;
   font-weight: 500;
   color: #8f1618;
   background-color: #ffffff;
+  text-decoration: none;
   border: none;
   border-radius: 999px;
   padding: 8px 28px;
@@ -58,9 +60,10 @@ h3,
     transform 0.2s;
 }
 
-.btn-saran:hover {
+/* Efek saat di-hover (kursor diarahkan ke tombol) */
+.btn-feedback:hover {
   background-color: #f1dede;
-  transform: translateY(-1px);
+  transform: translateY(-1px); /* Tombol naik sedikit saat di-hover */
 }
 
 /* Menu */
