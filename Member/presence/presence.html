@@ -19,7 +19,7 @@
         <img class="logo-text" src="../../assets/images/textlogo.png" alt="SEOGI" />
       </div>
 
-      <button class="hamburger" id="hamburger" aria-label="Buka menu">
+      <button class="hamburger" id="hamburger">
         <span></span>
         <span></span>
         <span></span>
@@ -27,16 +27,16 @@
 
       <div class="nav-content" id="nav-content">
         <div class="navbar-menu">
-          <a href="/ukm-taekwondo-polije/Member/index.html#home" data-section="home">Beranda</a>
-          <a href="/ukm-taekwondo-polije/Member/index.html#profile" data-section="profile">Profile</a>
-          <a href="/ukm-taekwondo-polije/Member/index.html#news-events" data-section="news-events">Berita &amp; Kegiatan</a>
-          <a href="/ukm-taekwondo-polije/Member/index.html#training-schedule" data-section="training-schedule">Jadwal &amp; Lokasi</a>
-          <a href="/ukm-taekwondo-polije/Member/presence/presence.html" data-match="/presence/">Presensi</a>
+          <a class="active" href="../index.html">Beranda</a>
+          <a href="../index.html">Profile</a>
+          <a href="../index.html">Berita & Kegiatan</a>
+          <a href="#schedule">Jadwal & Lokasi</a>
+          <a href="../presence/presence.html">Presensi</a>
           <span class="nav-indicator"></span>
         </div>
         <div class="navbar-action">
-          <a href="/ukm-taekwondo-polije/Guest/register/index.html">
-            <button type="button">Daftar Sekarang</button>
+          <a href="../../Admin/login-pengurus.html">
+            <button type="button">Login Pengurus</button>
           </a>
         </div>
       </div>
@@ -69,7 +69,6 @@
     </script>
 
     <main class="presence-page">
-
       <section id="presence" class="presence-section">
         <div class="presence-header reveal">
           <h1>Presensi Latihan</h1>
@@ -164,9 +163,24 @@
               </tr>
             </thead>
             <tbody id="attendanceBody">
-              <tr data-date="2026-12-16"><td>16/12/2026</td><td>Latihan Fisik &amp; Sparring (Kyorugi)</td><td>GOR Perjuangan 45 Polije</td><td>Hadir</td></tr>
-              <tr data-date="2026-12-16"><td>16/12/2026</td><td>Latihan Fisik &amp; Sparring (Kyorugi)</td><td>GOR Perjuangan 45 Polije</td><td>Hadir</td></tr>
-              <tr data-date="2026-12-16"><td>16/12/2026</td><td>Latihan Fisik &amp; Sparring (Kyorugi)</td><td>GOR Perjuangan 45 Polije</td><td>Hadir</td></tr>
+              <tr data-date="2026-12-16">
+                <td>16/12/2026</td>
+                <td>Latihan Fisik &amp; Sparring (Kyorugi)</td>
+                <td>GOR Perjuangan 45 Polije</td>
+                <td>Hadir</td>
+              </tr>
+              <tr data-date="2026-12-16">
+                <td>16/12/2026</td>
+                <td>Latihan Fisik &amp; Sparring (Kyorugi)</td>
+                <td>GOR Perjuangan 45 Polije</td>
+                <td>Hadir</td>
+              </tr>
+              <tr data-date="2026-12-16">
+                <td>16/12/2026</td>
+                <td>Latihan Fisik &amp; Sparring (Kyorugi)</td>
+                <td>GOR Perjuangan 45 Polije</td>
+                <td>Hadir</td>
+              </tr>
             </tbody>
           </table>
         </div>
@@ -230,10 +244,14 @@
 
         <div class="footer-bottom">
           <p>
-            <a href="#">Syarat &amp; Ketentuan Website</a> |
-            <a href="#">Kebijakan Privasi</a> |
-            <a href="#">Kode Etik Anggota</a> |
-            <a href="#">Panduan Latihan &amp; Keselamatan</a> |
+            <a href="#">Syarat &amp; Ketentuan Website</a>
+            |
+            <a href="#">Kebijakan Privasi</a>
+            |
+            <a href="#">Kode Etik Anggota</a>
+            |
+            <a href="#">Panduan Latihan &amp; Keselamatan</a>
+            |
             <a href="#">Regulasi Sabuk &amp; UUK</a>
           </p>
           <p>©2026 UKM Taekwondo Polije. Hak Cipta Dilindungi Undang-Undang.</p>
