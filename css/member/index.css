@@ -11,8 +11,11 @@ h3 {
   font-family: "Roboto", sans-serif;
 }
 
-/* ===== Tombol ===== */
+/* =========================================================
+   1. TOMBOL GLOBAL
+   ========================================================= */
 .btn-primary,
+.btn-outline,
 .btn-light {
   display: inline-block;
   padding: 10px 24px;
@@ -25,16 +28,30 @@ h3 {
   cursor: pointer;
   transition:
     transform 0.2s ease,
-    background-color 0.2s ease;
+    background-color 0.2s ease,
+    color 0.2s ease;
 }
 
 .btn-primary {
   background-color: #8f1618;
   color: #ffffff;
+  border: 1px solid #8f1618;
 }
 
 .btn-primary:hover {
   background-color: #6f1012;
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background-color: #ffffff;
+  color: #8f1618;
+  border: 1px solid #8f1618;
+}
+
+.btn-outline:hover {
+  background-color: #8f1618;
+  color: #ffffff;
   transform: translateY(-2px);
 }
 
@@ -47,6 +64,10 @@ h3 {
   background-color: #ffffff;
   transform: translateY(-2px);
 }
+
+/* =========================================================
+   2. HERO SECTION
+   ========================================================= */
 .hero-section {
   max-width: 1200px;
   margin: 0 auto;
@@ -54,7 +75,7 @@ h3 {
   display: grid;
   grid-template-columns: 1fr 520px;
   column-gap: 32px;
-  align-items: end; /* foto menempel di dasar hero */
+  align-items: end;
 }
 
 .hero-section h1 {
@@ -63,7 +84,7 @@ h3 {
   align-self: start;
   margin: 0 0 12px;
   font-family: "Roboto", sans-serif;
-  font-size: 52px; /* 74px terlalu besar dibanding desain */
+  font-size: 52px;
   font-weight: 900;
   line-height: 1.1;
   color: #8f1618;
@@ -88,15 +109,17 @@ h3 {
   display: block;
   width: 100%;
   max-width: 520px;
-  height: 220px; /* makin kecil = makin banyak kaki terpotong */
+  height: 220px;
   object-fit: cover;
-  object-position: top center; /* kepala aman, bawah yang terpotong */
+  object-position: top center;
 }
 
-/* ===== Jadwal Latihan Terdekat ===== */
+/* =========================================================
+   3. JADWAL LATIHAN TERDEKAT
+   ========================================================= */
 .schedule-section {
   max-width: 1200px;
-  margin: 0 auto; /* sebelumnya 24px auto 0 */
+  margin: 0 auto;
   padding: 0 24px;
 }
 
@@ -139,7 +162,9 @@ h3 {
   padding: 10px 32px;
 }
 
-/* ===== Info Terbaru ===== */
+/* =========================================================
+   4. INFO TERBARU
+   ========================================================= */
 .info-section {
   max-width: 1200px;
   margin: 24px auto 0;
@@ -185,61 +210,9 @@ h3 {
   margin-bottom: 14px;
 }
 
-/* ===== Responsif (Beranda, Jadwal, Info) ===== */
-@media (max-width: 992px) {
-  .info-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 768px) {
-  .hero-section {
-    grid-template-columns: 1fr;
-    padding: 24px 16px 0;
-    text-align: center;
-  }
-
-  .hero-section h1 {
-    font-size: 32px;
-  }
-
-  .hero-section p {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .hero-section .btn-primary {
-    justify-self: center;
-  }
-
-  .hero-section img {
-    grid-column: 1;
-    grid-row: auto;
-    justify-self: center;
-    margin-top: 16px;
-  }
-
-  .schedule-section,
-  .info-section {
-    padding: 0 16px;
-  }
-
-  .schedule-card {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .schedule-card .btn-primary {
-    width: 100%;
-  }
-}
-
-@media (max-width: 480px) {
-  .info-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
+/* =========================================================
+   5. PROFILE SECTION (SEJARAH, VISI MISI, ANGGOTA)
+   ========================================================= */
 .profile-section {
   max-width: 1200px;
   margin: 0 auto;
@@ -254,43 +227,57 @@ h3 {
   color: #8f1618;
 }
 
+/* --- Sejarah Singkat: Logo Kiri, Teks Kanan --- */
 .profile-section .history {
   display: flex;
   align-items: flex-start;
-  gap: 20px;
+  gap: 32px; /* Jarak antara logo dan teks */
   margin-top: 20px;
 }
 
 .profile-section .org-logo {
   flex-shrink: 0;
-  width: 230px;
-  height: 230px;
+  width: 280px; /* Ukuran logo diperbesar sedikit agar proporsional */
+  height: auto;
   border-radius: 8px;
   overflow: hidden;
-  background-color: #111111;
 }
 
 .profile-section .org-logo img {
   display: block;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
+}
+
+.profile-section .history-text {
+  flex: 1;
 }
 
 .profile-section .history-text h3 {
-  font-size: 16px;
+  font-size: 28px;
   font-weight: 700;
-  margin-bottom: 6px;
-  color: #1a1a1a;
+  margin-top: 0;
+  margin-bottom: 12px;
+  color: #8f1618; /* Judul sejarah diberi warna merah marun */
 }
 
 .profile-section .history-text p {
   font-size: 16px;
-  line-height: 1.6;
-  color: #333333;
+  line-height: 1.7;
+  color: #444444;
   text-align: justify;
+  margin-bottom: 24px;
 }
 
+/* --- Tombol di Sejarah (Visi & Misi) --- */
+.profile-section .history-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* --- Visi & Misi (Jika ada di HTML) --- */
 .profile-section .vision-mission {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -321,8 +308,9 @@ h3 {
   color: #8f1618;
 }
 
+/* --- Struktur Anggota --- */
 .profile-section .member-structure {
-  margin-top: 28px;
+  margin-top: 48px;
 }
 
 .profile-section .member-structure .section-title {
@@ -334,13 +322,13 @@ h3 {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 16px;
-  margin-top: 16px;
+  margin-top: 20px;
 }
 
 .profile-section .member-card {
   position: relative;
   aspect-ratio: 3 / 4;
-  border-radius: 4px;
+  border-radius: 8px; /* Sudut dibuat lebih membulat */
   overflow: hidden;
   background-color: #8f1618;
 }
@@ -351,6 +339,11 @@ h3 {
   height: 100%;
   object-fit: cover;
   object-position: top center;
+  transition: transform 0.3s ease;
+}
+
+.profile-section .member-card:hover img {
+  transform: scale(1.05); /* Efek zoom saat di-hover */
 }
 
 .profile-section .member-info {
@@ -358,31 +351,35 @@ h3 {
   left: 0;
   right: 0;
   bottom: 0;
-  padding: 18px 6px 6px;
+  padding: 24px 8px 10px;
   text-align: center;
   color: #ffffff;
   background: linear-gradient(to top, rgba(143, 22, 24, 0.95) 30%, rgba(143, 22, 24, 0));
 }
 
 .profile-section .member-info h4 {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 700;
   line-height: 1.2;
+  margin-bottom: 2px;
 }
 
 .profile-section .member-info p {
-  font-size: 9px;
+  font-size: 11px;
   font-weight: 400;
   line-height: 1.3;
 }
 
-/* ===== Scroll reveal ===== */
+/* =========================================================
+   6. SCROLL REVEAL ANIMATION
+   ========================================================= */
 .js .reveal {
   opacity: 0;
   transform: translateY(40px);
   transition:
     opacity 0.7s ease,
     transform 0.7s ease;
+  will-change: opacity, transform;
 }
 
 .js .reveal.in {
@@ -390,77 +387,9 @@ h3 {
   transform: translateY(0);
 }
 
-/* ===== Responsif ===== */
-@media (max-width: 992px) {
-  .profile-section .member-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (max-width: 768px) {
-  .profile-section {
-    padding: 24px 16px 40px;
-  }
-
-  .profile-section .section-title {
-    font-size: 20px;
-  }
-
-  .profile-section .history {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .profile-section .org-logo {
-    width: 120px;
-    height: 120px;
-  }
-
-  .profile-section .history-text p {
-    text-align: left;
-    font-size: 14px;
-  }
-
-  .profile-section .vision-mission {
-    grid-template-columns: 1fr;
-    gap: 14px;
-  }
-
-  .profile-section .vision-card p,
-  .profile-section .mission-card p {
-    font-size: 14px;
-  }
-
-  .profile-section .member-structure .section-title {
-    font-size: 24px;
-  }
-}
-
-@media (max-width: 480px) {
-  .profile-section .member-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
-  }
-
-  .profile-section .member-info h4 {
-    font-size: 12px;
-  }
-
-  .profile-section .member-info p {
-    font-size: 10px;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .js .reveal {
-    opacity: 1;
-    transform: none;
-    transition: none;
-  }
-}
-
-/* ===== Berita & Kegiatan ===== */
+/* =========================================================
+   7. BERITA & KEGIATAN
+   ========================================================= */
 .news-section {
   max-width: 1200px;
   margin: 0 auto;
@@ -493,7 +422,7 @@ h3 {
   color: #666666;
 }
 
-/* --- Agenda (versi desain) --- */
+/* --- Agenda --- */
 .event-agenda {
   margin-top: 28px;
 }
@@ -540,7 +469,7 @@ h3 {
   font-size: 12px;
 }
 
-/* --- Berita (versi modern) --- */
+/* --- Berita --- */
 .news-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -572,7 +501,7 @@ h3 {
   width: 100%;
   aspect-ratio: 16 / 9;
   object-fit: cover;
-  background-color: #e9b9ba; /* placeholder kalau gambar belum ada */
+  background-color: #e9b9ba;
   transition: transform 0.5s ease;
 }
 
@@ -633,35 +562,122 @@ h3 {
   padding-right: 30px;
 }
 
+/* =========================================================
+   8. RESPONSIF (MOBILE & TABLET)
+   ========================================================= */
+@media (max-width: 992px) {
+  .info-grid,
+  .profile-section .member-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 @media (max-width: 768px) {
+  /* Hero */
+  .hero-section {
+    grid-template-columns: 1fr;
+    padding: 24px 16px 0;
+    text-align: center;
+  }
+  .hero-section h1 {
+    font-size: 32px;
+  }
+  .hero-section p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero-section .btn-primary {
+    justify-self: center;
+  }
+  .hero-section img {
+    grid-column: 1;
+    grid-row: auto;
+    justify-self: center;
+    margin-top: 16px;
+  }
+
+  /* Jadwal & Info */
+  .schedule-section,
+  .info-section {
+    padding: 0 16px;
+  }
+  .schedule-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .schedule-card .btn-primary {
+    width: 100%;
+  }
+
+  /* Profile */
+  .profile-section {
+    padding: 24px 16px 40px;
+  }
+  .profile-section .section-title {
+    font-size: 20px;
+  }
+
+  /* Sejarah Mobile */
+  .profile-section .history {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+  .profile-section .org-logo {
+    width: 200px; /* Logo di tengah */
+  }
+  .profile-section .history-text h3 {
+    font-size: 22px;
+  }
+  .profile-section .history-text p {
+    text-align: justify; /* Tetap justify agar rapi */
+    font-size: 14px;
+  }
+  .profile-section .history-actions {
+    justify-content: center; /* Tombol visi misi ke tengah */
+  }
+
+  /* Visi Misi Mobile */
+  .profile-section .vision-mission {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  /* Berita Mobile */
   .news-section {
     padding: 32px 16px 48px;
   }
-
   .news-grid {
     grid-template-columns: 1fr;
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .news-card,
-  .news-card img,
-  .btn-read-more {
-    transition: none;
+@media (max-width: 480px) {
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-section .member-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .profile-section .member-info h4 {
+    font-size: 13px;
+  }
+  .profile-section .member-info p {
+    font-size: 10px;
   }
 }
 
-/* ===== Scroll reveal (naik dari bawah) ===== */
-.js .reveal {
-  opacity: 0;
-  transform: translateY(40px);
-  transition:
-    opacity 0.7s ease,
-    transform 0.7s ease;
-  will-change: opacity, transform;
-}
-
-.js .reveal.in {
-  opacity: 1;
-  transform: translateY(0);
+@media (prefers-reduced-motion: reduce) {
+  .js .reveal,
+  .news-card,
+  .news-card img,
+  .btn-read-more,
+  .profile-section .member-card img {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
