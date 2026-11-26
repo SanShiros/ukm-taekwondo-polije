@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Saran Terkirim - UKM Taekwondo Polije</title>
+    <!-- Pastikan path CSS-nya sesuai dengan struktur foldermu -->
+    <link rel="stylesheet" href="../../css/guest/feedback-success.css" />
+  </head>
+  <body>
+    <main class="presence-page">
+      <section class="success-section">
+        <div class="check-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" /></svg>
+        </div>
+
+        <!-- 1. Ubah Judul -->
+        <h1>Masukan Berhasil Dikirim!</h1>
+
+        <!-- 2. Ubah Sub-judul -->
+        <p class="success-sub">Terima kasih telah membantu kami menjadi lebih baik.</p>
+
+        <!-- 3. Sesuaikan Kartu Detail -->
+        <div class="detail-card">
+          <dl>
+            <dt>Jenis</dt>
+            <dd id="outType">[Jenis Masukan]</dd>
+
+            <dt>Kategori</dt>
+            <dd id="outCategory">[Kategori]</dd>
+
+            <dt>Status</dt>
+            <dd id="outStatus">[Status]</dd>
+
+            <dt>Pesan</dt>
+            <!-- Menggunakan span dengan class khusus agar teks panjang turun ke bawah -->
+            <dd id="outMessage" class="message-text">[Isi Pesan]</dd>
+          </dl>
+        </div>
+
+        <div class="success-actions">
+          <div class="action">
+            <a href="../index.html" class="btn-primary btn-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l9 8h-2.5v9h-5v-6h-3v6h-5v-9H3z" /></svg>
+              Kembali ke Beranda
+            </a>
+          </div>
+          <div class="action">
+            <a href="../feedback/feedback.html" class="btn-outline btn-icon">
+              <svg class="stroke" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
+                <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" />
+              </svg>
+              Kirim Masukan Lain
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

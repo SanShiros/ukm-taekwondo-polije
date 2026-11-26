@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kelola Konten</title>
+  </head>
+  <body>
+    <header>
+      <div>
+        <img src="icon-seogi.png" alt="Logo SEOGI" />
+        <span>SEOGI</span>
+      </div>
+
+      <div>
+        <span>Dashboard Pengurus - UKM Taekwondo</span>
+      </div>
+      <div>
+        <span>Pengurus</span>
+        <button type="button">Keluar</button>
+      </div>
+    </header>
+    <aside>
+      <div>
+        <img src="foto-baskara.jpg" alt="Foto Baskara" />
+        <div>
+          <p>Baskara</p>
+          <p>Ketua Umum</p>
+        </div>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="#dashboard">Dashboard</a></li>
+          <li><a href="#kelola-jadwal">Kelola Jadwal</a></li>
+          <li><a href="#kelola-presensi">Kelola Presensi</a></li>
+          <li><a href="#kelola-pendaftar">Kelola Pendaftar</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <h1>Kelola Konten</h1>
+
+    <h2>Edit Profile UKM</h2>
+
+    <form action="" method="post">
+      <div>
+        <label for="sejarah">Sejarah Singkat *</label><br />
+        <input type="text" id="sejarah" name="sejarah" required />
+      </div>
+
+      <div>
+        <label for="visi">Visi *</label><br />
+        <input
+          type="text"
+          id="visi"
+          name="visi"
+          placeholder="Text Visi"
+          required
+        />
+      </div>
+
+      <div>
+        <label for="misi">Misi *</label><br />
+        <input
+          type="text"
+          id="misi"
+          name="misi"
+          placeholder="Text Misi"
+          required
+        />
+      </div>
+
+      <br />
+
+      <table border="1">
+        <thead>
+          <tr>
+            <th>Jabatan</th>
+            <th>Nama</th>
+            <th>Foto</th>
+            <th>Aksi</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>CO</td>
+            <td>Bintang Maul</td>
+            <td>Foto</td>
+            <td>
+              <button type="button">Edit</button>
+              <button type="button">Delete</button>
+            </td>
+          </tr>
+          <tr>
+            <td>CO</td>
+            <td>Bintang Maul</td>
+            <td>Foto</td>
+            <td>
+              <button type="button">Edit</button>
+              <button type="button">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <br />
+
+      <div>
+        <p>Pesan Error Wajib Diisi</p>
+      </div>
+
+      <br />
+
+      <button type="submit">Simpan</button>
+      <button type="reset">Batal</button>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Presensi Berhasil | UKM Taekwondo Polije</title>
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+    <link rel="stylesheet" href="../../css/member/presence.css" />
+  </head>
+
+  <body>
+ 
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const hamburger = document.getElementById("hamburger");
+        const navContent = document.getElementById("nav-content");
+        const allLinks = document.querySelectorAll(".navbar-menu a");
+        const indicator = document.querySelector(".nav-indicator");
+
+        hamburger.addEventListener("click", () => navContent.classList.toggle("active"));
+        allLinks.forEach((a) => a.addEventListener("click", () => navContent.classList.remove("active")));
+
+        function moveIndicator() {
+          const active = document.querySelector(".navbar-menu a.active");
+          if (!active) return;
+          indicator.style.width = active.offsetWidth + "px";
+          indicator.style.transform = `translateX(${active.offsetLeft}px)`;
+        }
+
+        // Menu aktif = halaman yang sedang dibuka
+        const pageLink = [...allLinks].find((a) => a.dataset.match && location.pathname.includes(a.dataset.match));
+        if (pageLink) pageLink.classList.add("active");
+
+        moveIndicator();
+        window.addEventListener("load", moveIndicator); // setelah font selesai dimuat
+        window.addEventListener("resize", moveIndicator);
+      });
+    </script>
+
+    <main class="presence-page">
+      <section class="success-section">
+        <div class="check-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" /></svg>
+        </div>
+        <h1>Presensi Berhasil</h1>
+        <p class="success-sub">Kehadiran kamu pada sesi latihan telah tercatat</p>
+
+        <div class="detail-card">
+          <dl>
+            <dt>Nama</dt>
+            <dd id="outName">[Nama pendaftar]</dd>
+            <dt>NIM</dt>
+            <dd id="outNim">[NIM]</dd>
+            <dt>Jurusan</dt>
+            <dd id="outMajor">[Jurusan]</dd>
+            <dt>Waktu Check In</dt>
+            <dd id="outTime">[00.00]</dd>
+          </dl>
+        </div>
+
+        <div class="success-actions">
+          <div class="action">
+            <a href="/ukm-taekwondo-polije/Member/index.html" class="btn-primary btn-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l9 8h-2.5v9h-5v-6h-3v6h-5v-9H3z" /></svg>
+              Kembali ke Beranda
+            </a>
+          </div>
+          <div class="action">
+            <a href="/ukm-taekwondo-polije/Member/index.html#training-schedule" class="btn-outline btn-icon">
+              <svg class="stroke" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2" /><path d="M3 10h18M8 3v4M16 3v4" /></svg>
+              Lihat Jadwal Latihan
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+ 
+    <script src="../../js/member/presence-success.js"></script>
+  </body>
+</html>

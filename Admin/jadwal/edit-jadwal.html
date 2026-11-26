@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit Jadwal Latihan</title>
+  </head>
+  <body>
+    <h2>Edit jadwal latihan</h2>
+
+    <form action="" method="POST">
+      <div>
+        <label for="hari">Hari *</label><br />
+        <input
+          type="text"
+          id="hari"
+          name="hari"
+          placeholder="Nama Mahasiswa"
+          required
+        />
+      </div>
+      <br />
+
+      <div>
+        <label for="jam-mulai">Jam Mulai *</label><br />
+        <input
+          type="text"
+          id="jam-mulai"
+          name="jam_mulai"
+          placeholder="Masukkan Jam"
+          required
+        />
+      </div>
+      <br />
+
+      <div>
+        <label for="jam-selesai">Jam Selesai *</label><br />
+        <input
+          type="text"
+          id="jam-selesai"
+          name="jam_selesai"
+          placeholder="Masukkan Jam"
+          required
+        />
+      </div>
+      <br />
+
+      <div>
+        <label for="lokasi">Lokasi Latihan *</label><br />
+        <select id="lokasi" name="lokasi" required>
+          <option value="" disabled selected>Pilih jurusan *</option>
+        </select>
+      </div>
+      <br />
+
+      <div>
+        <label for="keterangan">Keterangan</label><br />
+        <textarea
+          id="keterangan"
+          name="keterangan"
+          rows="5"
+          placeholder="Keterangan"
+        ></textarea>
+      </div>
+      <br />
+      <div>
+        <button type="submit">Simpan</button>
+        <button type="button">Batal</button>
+      </div>
+    </form>
+  </body>
+</html>

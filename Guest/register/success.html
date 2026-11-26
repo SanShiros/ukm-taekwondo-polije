@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Presensi Berhasil - UKM Taekwondo Polije</title>
+    <link rel="stylesheet" href="../../css/guest/registersucces.css" />
+  </head>
+  <body>
+    <main class="presence-page">
+      <section class="success-section">
+        <div class="check-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" /></svg>
+        </div>
+        <h1>Presensi Berhasil</h1>
+        <p class="success-sub">Kehadiran kamu pada sesi latihan telah tercatat</p>
+
+        <div class="detail-card">
+          <dl>
+            <dt>Nama</dt>
+            <dd id="outName">[Nama pendaftar]</dd>
+            <dt>NIM</dt>
+            <dd id="outNim">[NIM]</dd>
+            <dt>Jurusan</dt>
+            <dd id="outMajor">[Jurusan]</dd>
+            <dt>Waktu Check In</dt>
+            <dd id="outTime">[00.00]</dd>
+          </dl>
+        </div>
+
+        <div class="success-actions">
+          <div class="action">
+            <a href="../index.html" class="btn-primary btn-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l9 8h-2.5v9h-5v-6h-3v6h-5v-9H3z" /></svg>
+              Kembali ke Beranda
+            </a>
+          </div>
+          <div class="action">
+            <a href="../../Member/index.html" class="btn-outline btn-icon">
+              <svg class="stroke" viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="3" y="5" width="18" height="16" rx="2" />
+                <path d="M3 10h18M8 3v4M16 3v4" />
+              </svg>
+              Lihat Jadwal Latihan
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      (function () {
+        let data = null;
+        try {
+          data = JSON.parse(sessionStorage.getItem("presence"));
+        } catch (err) {}
+        if (!data) return;
+
+        document.getElementById("outName").textContent = data.name;
+        document.getElementById("outNim").textContent = data.nim;
+        document.getElementById("outMajor").textContent = data.major;
+        document.getElementById("outTime").textContent = data.time;
+      })();
+    </script>
+  </body>
+</html>

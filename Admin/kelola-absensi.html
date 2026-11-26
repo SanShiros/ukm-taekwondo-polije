@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Kelola Absensi - SEOGI</title>
+</head>
+<body>
+
+    <!-- Header / Navigasi Atas -->
+    <div>
+        <strong>SEOGI</strong> | Dashboard Pengurus - UKM Taekwondo
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <span>Pengurus</span>
+        <button type="button">Keluar</button>
+    </div>
+
+    <hr>
+
+    <!-- Sidebar Menu Samping -->
+    <div>
+        <p><strong>Baskara</strong><br><small>Ketua Umum</small></p>
+        <hr>
+        <ul>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Kelola Jadwal</a></li>
+            <li><strong>Kelola Presensi</strong></li>
+            <li><a href="#">Kelola Pendaftar</a></li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <!-- Konten Utama: Kelola Absensi -->
+    <div>
+        <h2>Kelola Absensi</h2>
+
+        <!-- Bagian Sesi Presensi -->
+        <h3>Sesi Presensi</h3>
+        <p>Sesi Aktif [Senin, 19.00 - 21.00] Status : Dibuka</p>
+        <p>
+            <button type="button">Buka Sesi</button>
+            <button type="button">Tampilkan QR</button>
+            <button type="button">Tutup Sesi</button>
+        </p>
+
+        <hr>
+
+        <!-- Bagian Filter Rekap Kehadiran -->
+        <h3>Rekap Kehadiran Anggota</h3>
+        <p>
+            <label>Dari:</label><br>
+            <input type="text" value="DD/MM/YY">
+        </p>
+        <p>
+            <label>Sampai:</label><br>
+            <input type="text" value="DD/MM/YY">
+        </p>
+        <p>
+            <button type="button">Tampilkan</button>
+            <button type="button">Unduh Rekap</button>
+        </p>
+
+        <br>
+
+        <!-- Tabel Rekap Kehadiran Anggota -->
+        <table border="1" cellpadding="5" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>Nama</th>
+                    <th>NIM</th>
+                    <th>Jumlah Hadir</th>
+                    <th>Presentase</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Bintang</td>
+                    <td>E41260994</td>
+                    <td>18</td>
+                    <td>94%</td>
+                </tr>
+                <tr>
+                    <td>Bintang</td>
+                    <td>E41260994</td>
+                    <td>19</td>
+                    <td>96%</td>
+                </tr>
+                <tr>
+                    <td>Bintang</td>
+                    <td>E41260994</td>
+                    <td>28</td>
+                    <td>100%</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+</body>
+</html>

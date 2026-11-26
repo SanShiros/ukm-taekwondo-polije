@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Saran &amp; Kritik - UKM Taekwondo</title>
+    <link rel="stylesheet" href="../../css/guest/feedback.css" />
+    <link rel="stylesheet" href="../../css/guest/footer.css" />
+  </head>
+  <body>
+    <section class="feedback" id="feedback">
+      <div class="intro">
+        <h2>Saran &amp; Kritik</h2>
+        <p>Punya masukan soal latihan, pengurus, atau website ini? Tulis di sini. Semua pesan dibaca pengurus.</p>
+        <p>Nama dan kontak boleh dikosongkan. Isi kontak hanya jika kamu mau dibalas.</p>
+      </div>
+
+      <form id="feedbackForm" novalidate>
+        <div class="success" id="success" role="status">Terima kasih, masukanmu sudah kami terima.</div>
+
+        <fieldset id="typeGroup">
+          <legend>Jenis masukan</legend>
+          <div class="type-options">
+            <input type="radio" name="type" id="type1" value="suggestion" checked />
+            <label for="type1">Saran</label>
+            <input type="radio" name="type" id="type2" value="criticism" />
+            <label for="type2">Kritik</label>
+            <input type="radio" name="type" id="type3" value="question" />
+            <label for="type3">Pertanyaan</label>
+            <input type="radio" name="type" id="type4" value="appreciation" />
+            <label for="type4">Apresiasi</label>
+          </div>
+        </fieldset>
+
+        <div>
+          <label class="field-label" for="category">Yang dibahas</label>
+          <select id="category" name="category">
+            <option value="training">Latihan</option>
+            <option value="committee">Pengurus</option>
+            <option value="facilities">Fasilitas</option>
+            <option value="website">Website</option>
+            <option value="other">Lainnya</option>
+          </select>
+        </div>
+
+        <div id="messageBlock">
+          <label class="field-label" for="message">Isi pesan</label>
+          <textarea id="message" name="message" maxlength="1000" placeholder="Tulis masukanmu sejelas mungkin"></textarea>
+          <div class="hint">
+            <span class="error" id="messageError">Isi pesan belum diisi.</span>
+            <span id="counter">0 / 1000</span>
+          </div>
+        </div>
+
+        <div class="row">
+          <div>
+            <label class="field-label" for="name">
+              Nama
+              <span class="optional">(opsional)</span>
+            </label>
+            <input type="text" id="name" name="name" autocomplete="name" />
+            <label class="anonymous">
+              <input type="checkbox" id="anonymous" name="anonymous" />
+              Kirim sebagai anonim
+            </label>
+          </div>
+          <div>
+            <label class="field-label" for="status">Status</label>
+            <select id="status" name="status">
+              <option value="public">Umum</option>
+              <option value="prospective">Calon anggota</option>
+              <option value="member">Anggota</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label class="field-label" for="contact">
+            WhatsApp atau email
+            <span class="optional">(opsional)</span>
+          </label>
+          <input type="text" id="contact" name="contact" autocomplete="off" />
+          <div class="hint"><span>Kosongkan jika tidak perlu dibalas.</span></div>
+        </div>
+        <div class="button-action-feedback">
+          <a href="../feedback/feedback-success.html" class="btn-submit-feedback">Kirim</a>
+          <a href="../index.html" class="btn-cancel-feedback">Kembali</a>
+        </div>
+      </form>
+    </section>
+  </body>
+</html>
